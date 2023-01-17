@@ -15,23 +15,33 @@ Lorem ipsum dolor sit amet. This project builds upon the idea of [Chindōgu](htt
 
 ## Concept
 
+-- Kösi
+
 Here you could summarize your project proposal. How did you plan to build your prototype? Did you arrive at your idea immediately or did you iterate over it? Describe your process. 
 
 ![Chopsticks](assets/chopsticks.jpg)
 
 ## Implementation
 
+- Sebi
+
 Describe how you implemented your project. Which iterations did go through? What did work and what did not work? Did you adapt your original idea to practical difficulties during implementation?
 
 ### Iteration A
 
+First Prototype
 Lorem ipsum dolor sit amet.
 
 ### Iteration B
-
+- Tests of the parts of its own
 Lorem ipsum dolor sit amet.
 
 ### Iteration C
+
+- final prototype
+- anleitung wie man es baut, code einbauen und schaltplan werweis auf materials
+
+- Box bauen
 
 Lorem ipsum dolor sit amet.
 
@@ -39,7 +49,16 @@ Lorem ipsum dolor sit amet.
 
 What materials and hardware did you use in your iterations and your final prototypes? Did you modify any ready-made devices? Did you build it from scratch? What tools did you use to implement your prototype?
 
+Material liste
+
 ![Application](assets/simone.gif)
+
+
+## Learnings
+
+- was haben wir gelernt.
+- elektronik
+- baun
 
 ## Conclusion
 
