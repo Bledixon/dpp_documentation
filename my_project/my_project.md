@@ -4,7 +4,7 @@ layout: home
 has_children: true
 ---
 
-# My Project (project name)
+# Saltapult
 
 Project documentation for the **Design for Physical Prototyping** course 2022/23 focusing on the topic of **Uncomfortable Devices**.
 
@@ -15,7 +15,18 @@ Lorem ipsum dolor sit amet. This project builds upon the idea of [Chindōgu](htt
 
 ## Concept
 
--- Kösi
+The initial brainstorming in the DPP course paved the road for the Saltinator. While the first ideas where rather tame, it didn't take long to end up with some crazy concepts which are impossible with current technology. But this information dumping helped with coming up with something that was actually buildable.
+
+After a private remote session we reduced our possible candidates to three ideas.
+* A hairdryer attachment that insults you when you use the highest setting.
+* A odorizant that tells you about their feelings and what kind of problems they are facing currently.
+* A self driving vacuum cleaner that insults you and some other features that have been lost in translation.
+* A date buddy that analyzes your breath and sprays peppermint breath refresher accordingly.
+* ... and finally a laundary basket that throws the laundary back at you once it's full and also keeps insulting you.
+
+In retrospect it's pretty clear that the "insulting" part was our main driver for most ideas, which most likely pairs with that fact that the idea of an insulting machine seems uncomfortable at first, but in the end it's actually quite the opposite. We insult each other all the time, it's a form of comedy and it's especially hard to convey these often highly emotional outbursts through cheap speakers and with no facial impressions.
+
+
 
 Here you could summarize your project proposal. How did you plan to build your prototype? Did you arrive at your idea immediately or did you iterate over it? Describe your process. 
 
