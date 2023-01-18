@@ -1,8 +1,8 @@
 title: DPP Documentation
-description: A starter template for a Jeykll site using the Just the Docs theme!
+description: This is the documentation for our DPP project: Saltapult
 theme: just-the-docs
 
-url: https://pretoms.github.io/dpp_docs_template
+url: https://bledixon.github.io/dpp_docs_template
 
 color_scheme: nil
 callouts_level: quiet # or loud
@@ -23,4 +23,4 @@ callouts:
     color: red
 
 aux_links:
-  Repository: https://github.com/pretoms/dpp_docs_template
+  Repository: https://github.com/bledixon/dpp_documentation
