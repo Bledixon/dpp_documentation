@@ -43,11 +43,13 @@ The biggest issue was conceptualizing how the launching mechanism works. Due to 
 With the concept our next step was to create the box and implement the needed components. To do so, several iterations were needed to get the electronic working.
 Bevore we could start with the project a simple version of our concept needed to be created. This first prototype should be simple to created, present the main function of the concept and should be fast built. To do so the first test system was built.
 
-### Paper prototype
+### Cardboard prototype
 
 The first prototype is basically build with a shoebox. A smaller box is used as base plattform for the main box. A plastic asian delivery food box is used for putting the cloth in. The plastic box is glued down to the smaller cardboard box. To build the catapult system four hookes are screwed in the cornes of the smaller box and four to the top of the shoebox. Another hooked is screwed in the middle of the bottom side of the smaller box. To make sure that someone can pull down the smaller box, a hole is made in the middle of the bottom side of the shoebox. A string is put through the hole connected to the hook at the bottom side of the smaller box. To make the catapult work four rubber bands are used as springs to create a connection between the four hooks at each box. To refill the box cut a hole in the same size of the plastic into the top of the shoebox. To test the catapult, objects are placed into the plastic box and string is pulled down. Let the string out and the box is going upwards.
 
 With the first prototype we found out that we can not build the catapult with cardboard. Cardboard is not robust enough and so we decided to go with wood and do further tests with it.
+
+![Cardboard prototype](assets/Prototype.jpg)
 
 ### Testing components
 
@@ -55,6 +57,8 @@ To get a better understanding of how the components work and how to use them tog
 In this subsection describes the components and how they got tested and used.
 
 The first component we tested is the infrared receiver. If infrared light hits the reiceiver, a signal is generated which can be detected and used from the arduino. Becuase of the short distance which they receiver needs to detect the light we decided to take an ultrasound sensor. The advantage of the ultrasound sensor is that it can detect detect interrupts more easily. The basic funcionality of an ultrasound sensor is that is sends out an ultrasound which get reflected. When the reflection hits the ultrasound sensor a distance is calculatet with the time which past until the sound got recognized. Using this funcionallity allows to detect when the distance is changing and react to it. To connect the ultrasound sensor to the arduino only four wires are needed; one to the voltage source (5V), one to the ground and the other twos to a choosen digital output.
+
+![Ultrasound test](assets/ultrasound_test.jpg)
 
 The next step was to try out the motor. We needed to figure out how much voltage and current it needs. To do so we connected the motor to a laboratory power supply with 12V. To messure the needed current wo contected a multimeter in series with the engine and the power supply. The result was 0.2A so a good value for using a 12v power supply. To test the strength of the motor we glued a string to the shaft of the motor and put some weight on it. It is possible with the motor to lift up a screw jack. We tested the motor with the new 12V power supply but after realizing that we also need a mechanic to hold the plate which needs at least 24V we needed to change the power supply. As power supply we got a 24V one. To regualte the voltage a step down is used. A step down is a component which gets a input supply and regulates the voltage over a turning resistor. To get the right voltage the input of the step down was connected to the power supply, the output to the multimeter. To set the right voltage a screw has to be turned. 
 
@@ -74,6 +78,8 @@ The last component we needed to test are the springs. We bought several kinds of
 After testing all components and how we have to use them, it is finally time to build our prototype. 
 Before we started to connect all the components a wiring plan was created, see figure []. This avoid putting the wrong wire to the wrong pin and also helps to understand what needs to be connected to to which component. To avoid any damage to the components a switch toggler was build in to have the opportunity to turn off the whole thing just with one whip. We could also plug out the power supply but that would take longer and also some times it is difficult to get the plug out realy fast.
 
+![Combined components](assets/combine_componants.jpg)
+
 #### Code
 In the folder Code are all the code snipets which where used for testing the components. The task for the final prototype was to combine all the snippets to one file, or in our case in two files.
 
@@ -91,11 +97,18 @@ With this new element the behavior of the code from the Mega changed just slight
 
 Another problem was, that normally a gear is used to mount an object to the shaft of the motor. We could not get a gear for our project. Therfore, we needed to think about a solution to mount our winch to the motor. Our first idea was to design a wench in a 3D programm like Fusion and print it with a 3d printer. We withdrawed this idea because we had no 3D printer in reach. Another idea was to craft something on our own. We took a regular plastic bottle and cut off the bottleneck. A soldering iron was used to create a hole into the bottle cap. To create the winch cardboard and foam rubber was cutted into circles and glued to the bottleneck. To mount the string to the bottleneck a hole was created with the soldering iron. The string is pushed through the hole and fixed with a washer (Beilagscheibe). At the end the bottlecap was assembled to the motor shaft and the bottleneck to the cap.
 
+![Combined components](assets/wrinch.jpg)
+
 
 #### Building the box
 
 - Box bauen      Kössi
 
+
+#### The presentation
+
+
+![Saltapult presentation](assets/saltapult.jpg)
 
 ## Materials and tools
 
