@@ -78,7 +78,7 @@ The last component we needed to test are the springs. We bought several kinds of
 After testing all components and how we have to use them, it is finally time to build our prototype. 
 Before we started to connect all the components a wiring plan was created, see figure []. This avoid putting the wrong wire to the wrong pin and also helps to understand what needs to be connected to to which component. To avoid any damage to the components a switch toggler was build in to have the opportunity to turn off the whole thing just with one whip. We could also plug out the power supply but that would take longer and also some times it is difficult to get the plug out realy fast.
 
-![Combined components](assets/combine_componants.jpg)
+![Combined components](assets/combine_componants.jpeg)
 
 #### Code
 In the folder Code are all the code snipets which where used for testing the components. The task for the final prototype was to combine all the snippets to one file, or in our case in two files.
@@ -86,6 +86,8 @@ In the folder Code are all the code snipets which where used for testing the com
 ##### Uno
 The job of the uno is to detect if something is thrown in the box. If so the distance, which gets detected from the ultrasound sensor, changes and the uno activates the sound modul. The plastic box has lenght about 25cm. To avoud that the arduino gives activates the signal all the time it should only do so when the distance is shorter than 20cm. The goal here was to detect the point when the box is full. There are two possible ways to do so: if the distance is shorter than 20cm wait some seconds and check it again; or using a counter to detect if the distance is still shorter and after a given value the arduino knows that the box is full.
 We tried both solution and found out that checking the distance and waiting for some time is not the best solution. It is possible that you throw something in and after some seconds you throw again something in which would be detected as a full box. Therefore, the interruption counter is our solution. If something changes the distance below 20cm the counter is increased by one. In the next loop the distance is checked again, if it is still below 20cm than the counter is increased again by on, otherwise the counter is set to zero. If the counter reaches a value of onehundred the systems detects it as full and a self-destruction sound is played which would lead to enable the solenoid and activating the catapult.
+
+![code representation](assets/snippet_of_code.png)
 
 ##### Mega
 The main job of the mega is to enable the solenoid; activating the motor to coil up the string which brings the plate to a certain position; deactivate the solenoid to hold the plate; rotate the motor in the opposit direction to unwind the string to avoid that the motor will be draged by the plate, and wait until the uno sends a signal to start the catapult process which enables the solenoid and shoots the plate upwards. The base input is to send a HIGH signal over a digital output to the solenoid to enable it. To turn the motor the four output pins need to be set to a predefined configuration of HIGH and LOW which leads to a left or right rotation. The ENA and ENB decide how fast the motor is rotating. To avoid a abrupt start and stop the values of ENA and ENB are in-/decreased with a for loop. The duration of the motor is set by a time limit.
@@ -106,7 +108,11 @@ Another problem was, that normally a gear is used to mount an object to the shaf
 
 
 #### The presentation
+While building the box of the prototype we found out that the wrinch is not that stable as it should be. The motor is able to rotate it without trying to pull down the plate, but with the plate the force of the springs was to much and the winch stayed on the same position. The other thing we noticed is that one solenoid is not enough to hold the plate. Therfore, we decided to go with a prototype which just shows how it should work. The solenoid and the motor never interact with the hanging plate and so no force is used to it. To show how the initial idea works the user has to pull down the plate and hold it until someone press the button.
 
+At the presentation we got a lot of feedback of how well designed it. Everyone liked the idea and know exactly which problem we adressed.
+Even the mechanism did not work as planned everyone understood what we tried to do and liked it. The highlight was definitly the insults.
+The presentation time was great because we were able to display our prototype and talk about our ideas and steps and what we learned while building it. 
 
 ![Saltapult presentation](assets/saltapult.jpg)
 
@@ -114,21 +120,40 @@ Another problem was, that normally a gear is used to mount an object to the shaf
 
 The main materials for this project were reused. All the components from the box where made out of wood which we already had at home such as from old chairs, shelves and a fance. A list of all components used are displayed in the table below:
 
-Material liste
+### Material liste
 
 ![Material list](assets/material_list.png)
 
 
 ## Learnings
+While building our prototype a lot of new things were learnt such as how the components werke, how to write arduino code or even how to design a mechanism.
+Sometimes you need to think out of the box to find a solution like the whench. even though there are some tutorials out there who show how to use the different components, combining them is another step and sometimes leads to some problems. This chapter summs up our learnings and should be a help for people who try to do something similar we did.
 
-- was haben wir gelernt.
-- elektronik
-- baun
+The first thing we definitly learnt is that you need to try things out. Connect it with a power supply and look what it does. It helps a lot to understand the behavior of the component and how it can be used. We did that several times such as the ultrasound sensor, the motor or even with the solenoid.
+
+Another thing would be that looking up for already existing code helps a lot to test things out. There are a lot of different codes out there for the components. To analyze them and make it for the project helped a lot to create the final code script. Even though some tutorials are not that helpfull, some of them can safe a lot of time. Also YouTube is your best friend.
+
+The most difficult part was the mp3 shield. The reason why it was so complicated is that the uno has less output pins. The shield uses some of them and the provided document from sparkfun did not help a lot. They dont describe which pins are used and which one are free. Therfore, we tried to figure out which pins are needed for playing audio with the speaker. At the end, the shield needs all digital pins expect of PIN 4/5 and all analog pins. The pins are already used by the ultrasound sensor so there were no free pins for the other components. To make things more easy we changed the arduino from Uno to Mega 2560 which has more digital output pins and would fit perfectly for our projject. But, although there were a documentation about how to connect the shield with the Mega the shield did not work. After two and a half day of trying out different ways to connect the shield with the Mega, even changing some parts in the original library, the shield did not work. So to make our project working we decided to use both Arduinos to get the best of both. 
+
+The mp3 shield also has some strange behaviors we could not fix. Like the sound was a big problem until the presenation. We fixed it 5 minutes before presentation because in the documentation was mentioned to set the volum to 255 to get the maximum volume. We found out that setting the volum with MP3player.setVolume() needs a value of 0 to get the maximu audio. There is also a problem with playing the audio. To do so, the name is put in the play() function. The library needs a Char array type, but rhe software Arduino does not have a char array. So putting a string in it does not work. To fix this problem, a switch state is used with a number as counter. Each state represants a path to the audio file. 
+
+We also learnt a lot while building the box. Components like the motor or the solenoid need a special plate to fix it to a frame or plate. Typically this holding is made out of metall to provide stability. We had no metall plates so we decided to use wood. To mount them to holding system, the motor and the solenoid has holes to assemble it to the metal plates. We could not use this holes, thus we built a cages for both components to lock them. The biggest problem with both components was the traction of the springs. They were so strong that the motor was pulled up and the wench did not work. To avoid that we could print a better fitting wench which get screwed down to the shaft of the motor and use metal to lock the motor. The solenoid had the problem that the plate tipped over and at the point of fixation a lot of traction arise. Thus, the traction was so strong that the solenoid could not be activated anymore and the plate did not move anymore. To avoid that problem instead of using one solenoid at least two of them should be used. Maybe schanging the springs to weaker ones could also help to reduce the tranction and so make the release better.
+
+Overall it was a good way to refresh allready known knowledge and to learn new things.
+It also showed that having a plan helps a lot to build projects faster than just put things in a box and hope that it will be working.
 
 ## Conclusion
 
-Shortly summarize your project implementation process and the resulting outcome.
-What problems and limitations did you face? What experiences did you make 
+Even though one teammate left the team we were able to create a prototype which showed our idea of a box which throws out stuff when it is full.
+Allthough, not everything worked as planned we learned a lot of new things an had a lot of fun creating the prototype.
+While the presentation we definitly saw the potential of our project. This box can be used for multiple options like throwing out stones, leafes, dice and way more.
+Also the insults where a good way to bring a smile to the users. Maybe not that cool when an alarm wakes you up middle in the night so you know that you have to much cloth in your box. But in the end everybody liked the concept and result we had presented.
+
+Looking back at the concepts we would change a lot to improve our prototype to get a better result. But thats typicall the thing you do when you are starting with project; try stuff out and if it is not working try another way to do it. We would definitly try out other springs and improve the wrench with a 3D printed version. Instead of using one solenoid we woud increase the number to two and maybe more. Instead of using wood PU plates would be more suitable and lighter. 
+the MP3 shield worked well but there is definitly a better way to do that and replacing it would help to have only one Arduino and maybe improve the audio a little bit.
+
+The next steps are now takeing the learnings from the project and build upon it to create a box which throws the dice in the air so you dont have to throw it anymore. 
+Thus, the box can be way more smaller and the materials dont need to be that stable because of the lesser weight of the dice.
 
 
 {: .note }
