@@ -103,7 +103,7 @@ The main materials for this project were reused. All the components from the box
 
 Material liste
 
-![Application](assets/simone.gif)
+![Material list](assets/material_list.png)
 
 
 ## Learnings
