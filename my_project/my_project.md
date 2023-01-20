@@ -62,7 +62,7 @@ To be able to controll the motor a H-Bridge is used. This component gets an inpu
 
 As realease meachnism a solenoid is used. If voltage is inductaded the shift is able to to move allows to hold our plate. To test the funcionality the solenoid is connected to the laboratory power supply which has an output of 24V. To avoid that the solenoid is activated to long we decided to take the black shaft instead of the screw shaft. The solenoid only has an input and output, so a relais is needed to switch the state of the solenoid. To do so the power supply is connected to the relay. The relais has two outputs normally open (NO) and normally closed (NC). To get the effect of a button the solenoid needs to be conected to the normally open conection, because this one get only activated after the arduino puts the output to high. Normally closed is already connected to the power supply and would get to the open state after the arduino sends a high signal. To test the relais-solenoid combination the power supply and the arduino are getting connected to the relais. The solenoid is connected with with ground (GND) and the normally open pin on the relay. Checking the funcionality is simple, just upload the the Relay code to the arduino.
 
-For insulting we used the sparkfun mp3 audio shield. This is a shield is made for the Arduino Uno. It is designed to fit perfectly to the contection of the Arduino Uno, thus no wires are needed. To receive a sound headphones where used in the first iteration. To use the shield the mp3 library of the shield needs to be importat to the arduino software. To test it, one of the example codes can be used. We used the "Filereader" to test if the shield is working. To use it for our own project the setup as well as the start playing part were copied from the "Filereader". To improve audio an old speaker is used.
+For insulting we used the sparkfun mp3 audio shield. This is a shield is made for the Arduino Uno. It is designed to fit perfectly to the contection of the Arduino Uno, thus no wires are needed. To receive a sound headphones where used in the first iteration. To use the shield the mp3 library of the shield needs to be importat to the arduino software. To test it, one of the example codes can be used. We used the "Filereader" to test if the shield is working. To use it for our own project the setup as well as the start playing part were copied from the "Filereader". To improve audio an old speaker is used. Creating the insults for the shield is tricky but knowing that only mp3 and wav data is working gathering audio samples was not that bad. To get the samples a text-to-speach online service is used. The insults are from online forms and are mostly about smelling. The client service allows to put in the insults as text and can directly be downloaded as mp3. The file name needed to be changed to a format like 000x.mp3 or 000x.wav. A sd card with a maximum of 32GB is used for storage. 
 
 The mp3 shield gave us some problem, see chapter Learnings. To get rid of the problems a second arduino is used. The arduino Uno is used to check the interrupts with the ultrasound sensor and plays the according audio. The Mega 2560 is used to controll the motor and the solenoid. To make sure that the Mega knows when it is allowed to enable the solenoid a communication between uno is necessary. We tried two different approach: directly communication via digital outputs (UART) and via communication pins (I2C). A sample code of a slave and master system is in the Code folder.
 
@@ -85,22 +85,21 @@ We tried both solution and found out that checking the distance and waiting for 
 The main job of the mega is to enable the solenoid; activating the motor to coil up the string which brings the plate to a certain position; deactivate the solenoid to hold the plate; rotate the motor in the opposit direction to unwind the string to avoid that the motor will be draged by the plate, and wait until the uno sends a signal to start the catapult process which enables the solenoid and shoots the plate upwards. The base input is to send a HIGH signal over a digital output to the solenoid to enable it. To turn the motor the four output pins need to be set to a predefined configuration of HIGH and LOW which leads to a left or right rotation. The ENA and ENB decide how fast the motor is rotating. To avoid a abrupt start and stop the values of ENA and ENB are in-/decreased with a for loop. The duration of the motor is set by a time limit.
 
 #### Contingency plan
-Notfallplan
+While building combining the components and create one code a problem occured. The communication between both arduinos stopped working.
+Although it worked before in the combined version a error occured and it was not possible to send data from one arduino to the other one. Even with the base version of just setting a digital output. Therefore, a new solution was need. A button was the simpliest way to demonstrate the funcionality of the system.
+With this new element the behavior of the code from the Mega changed just slightly. Instead of waiting at the signal from the Uno, now the button is used to represent this communication. When it is pressed the solenoid is activated and the platform is able to move upwards.
+
+Another problem was, that normally a gear is used to mount an object to the shaft of the motor. We could not get a gear for our project. Therfore, we needed to think about a solution to mount our winch to the motor. Our first idea was to design a wench in a 3D programm like Fusion and print it with a 3d printer. We withdrawed this idea because we had no 3D printer in reach. Another idea was to craft something on our own. We took a regular plastic bottle and cut off the bottleneck. A soldering iron was used to create a hole into the bottle cap. To create the winch cardboard and foam rubber was cutted into circles and glued to the bottleneck. To mount the string to the bottleneck a hole was created with the soldering iron. The string is pushed through the hole and fixed with a washer (Beilagscheibe). At the end the bottlecap was assembled to the motor shaft and the bottleneck to the cap.
 
 
 #### Building the box
 
-- final prototype
-- anleitung wie man es baut, code einbauen und schaltplan werweis auf materials
-
-- Box bauen
+- Box bauen      Kössi
 
 
 ## Materials and tools
 
-What materials and hardware did you use in your iterations and your final prototypes? Did you modify any ready-made devices? Did you build it from scratch? What tools did you use to implement your prototype?
-
-The main materials for this project were reused. All the components from the box where made out of wood which we already had at home such as from old chairs, shelves and fance. A list of all components used are displayed in the table below:
+The main materials for this project were reused. All the components from the box where made out of wood which we already had at home such as from old chairs, shelves and a fance. A list of all components used are displayed in the table below:
 
 Material liste
 
