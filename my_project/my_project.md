@@ -77,7 +77,7 @@ The last component we needed to test are the springs. We bought several kinds of
 
 After testing all components and how we have to use them, it is finally time to build our prototype. 
 Before we started to connect all the components a wiring plan was created, see figure []. This avoid putting the wrong wire to the wrong pin and also helps to understand what needs to be connected to to which component. To avoid any damage to the components a switch toggler was build in to have the opportunity to turn off the whole thing just with one whip. We could also plug out the power supply but that would take longer and also some times it is difficult to get the plug out realy fast.
-
+![Wire Plan](assets/wireing_plan.png)
 ![Combined components](assets/combine_componants.jpeg)
 
 #### Code
@@ -99,7 +99,7 @@ With this new element the behavior of the code from the Mega changed just slight
 
 Another problem was, that normally a gear is used to mount an object to the shaft of the motor. We could not get a gear for our project. Therfore, we needed to think about a solution to mount our winch to the motor. Our first idea was to design a wench in a 3D programm like Fusion and print it with a 3d printer. We withdrawed this idea because we had no 3D printer in reach. Another idea was to craft something on our own. We took a regular plastic bottle and cut off the bottleneck. A soldering iron was used to create a hole into the bottle cap. To create the winch cardboard and foam rubber was cutted into circles and glued to the bottleneck. To mount the string to the bottleneck a hole was created with the soldering iron. The string is pushed through the hole and fixed with a washer (Beilagscheibe). At the end the bottlecap was assembled to the motor shaft and the bottleneck to the cap.
 
-![Combined components](assets/wrinch.jpg)
+![Wrinch](assets/wrinch.jpg)
 
 
 #### Building the box
