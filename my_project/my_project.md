@@ -112,11 +112,23 @@ We figured it made the most sense to measure all parts and calculate a minimum w
 
 ![Final Plan](assets/final_plan.jpg)
 
-We switch from a box approach to only having four supporting towers, allowing people to see the inner workings of our prototype and also easier debugging. Only having one solenoid combined with the open space and only having two rails further drove into one possible build configuration: Place the support on the length side, add supporting rails diagonally from each other and place the solenoid to the width side. With the initial headaches out of the way we finally started building and choose a big green wooden piece as the base of our prototype.
+We switch from a box approach to only having four supporting towers, allowing people to see the inner workings of our prototype and also easier debugging. Only having one solenoid combined with the open space and only having two rails (drawer slides) further drove into one possible build configuration: Place the support on the length side, add supporting rails diagonally from each other and place the solenoid to the width side. With the initial headaches out of the way we finally started building and choose a big green wooden piece as the base of our prototype.
 
 #### Fixating the motor
 
-The first task we tackled was fixating the motor. We started by measuring the wooden base and finding the center, which was important for the placement of the rope to avoid torgue towards the sides and unnecessary stress for our components. We also needed to consider the height of the motor holding component as it might have interfered with the movable platform if the supporting pedestals are not high enough. Furthermore, we also needed to securely mount the motor to hold steady, while simultaneously not break the motor holder due to the stress applied.
+The first task we tackled was fixating the motor. We started by measuring the wooden base and finding the center, which was important for the placement of the rope to avoid torgue towards the sides and unnecessary stress for our components. We also needed to consider the height of the motor holding component as it might have interfered with the movable platform if the supporting pedestals are not high enough. Furthermore, we also needed to securely mount the motor to hold steady, while simultaneously not break the motor holder due to the stress applied. We opted for additional support by placing a wooden extension on each side. To fixate the wood we used an array of screws we had available in my little workshop. To further improve stability we added a slight angle so the motor would naturally get stuck once the distance gets too small. The final height came out to be 15 centimetres.
+
+![Motor Structure](assets/motor_structure.jpg)
+
+![Motor Implementation](assets/motor_implementation.jpg)
+
+#### Supporting pillars
+
+Switching from a box to a more open design allowed for a lot more flexibility in several aspects. After some trial and error trying to determine the needed minimum height for the middle platform we finally started building.. only to realize that we mounted the platform on the wrong socket of the drawer slide. The basic idea was to use six pieces of wood, four attached widthwise, two supporting and combining the opposite pillars on the top. This would also be the place we attached the springs to later on. After a good chunk of wood work and drilling in a rather unsafe manner we finally managed to complete the basic structure of the supporting/catapult element and attached it to the base, which marked the beginning of the testing and electronic phase. 
+
+![Supporting Pillar](supporting_pillar.jpg)
+
+![Supporting Pillar](torque_test.mp4)
 
 #### The presentation
 While building the box of the prototype we found out that the wrinch is not that stable as it should be. The motor is able to rotate it without trying to pull down the plate, but with the plate the force of the springs was to much and the winch stayed on the same position. The other thing we noticed is that one solenoid is not enough to hold the plate. Therfore, we decided to go with a prototype which just shows how it should work. The solenoid and the motor never interact with the hanging plate and so no force is used to it. To show how the initial idea works the user has to pull down the plate and hold it until someone press the button.
