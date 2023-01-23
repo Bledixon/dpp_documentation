@@ -8,6 +8,8 @@ has_children: true
 
 Project documentation for the **Design for Physical Prototyping** course 2022/23 focusing on the topic of **Uncomfortable Devices**.
 
+![Saltapult Logo](assets/saltapult_logo.png)
+
 ## Abstract
 
 This project builds upon an idea we came up with after several brainstorming sessions. The main object of Saltapult - a smart (at least in some way) laundry basket - is to detect if and how much dirty cloth a user has thrown into it. For each new piece, the user gets insulted. A full basket results in an epic launch that wakes the user up, unexpected, in the best case. This paper will guide the reader through all processes of the project, from the early concept and motivation, to the different testing states/implementations, our first prototype, building the final prototype, the presentation and finally to our conclusion.
@@ -104,7 +106,6 @@ Another problem was, that normally a gear is used to mount an object to the shaf
 
 ![Wrinch](assets/wrinch.jpg)
 
-
 #### Building the box
 
 As with most things, the beginning turned out to be quite difficult. It was pretty clear from the get-go that we'd use wood as the main structural material, not only for its durability, but also ease of access. We had to consider the g-forces that get applied to the material when the motor pulls the platform towards the ground and releases it. Similar stress is placed on the solenoid, trying to hold the platform down. One concern we initially had was the weight, especially considering the quality of rope we'd use and how the motor truly is, which quickly became obsolete as mentioned in the other tests. Luckily we both had quite an array of broken wood furniture, old unused processed wood pieces and other wooden elements that could be used.
@@ -137,6 +138,9 @@ Switching from a box to a more open design allowed for a lot more flexibility in
 ![Video of the first launch](assets/torque_test.mp4)
 
 #### The presentation
+
+![Saltapult Flyer](assets/saltapult_flyer.png)
+
 While building the box of the prototype, we found out that the winch is not that stable as it should be. The motor is able to rotate it without trying to pull down the plate, but with the plate the force of the springs was too much and the winch stayed on the same position. The other thing we noticed is that one solenoid is not enough to hold the plate. Therefore, we decided to go with a prototype which just shows how it should work. The solenoid and the motor never interact with the hanging plate, and so no force is used to it. To show how the initial idea works, the user has to pull down the plate and hold it until someone press the button.
 
 At the presentation, we got a lot of feedback of how well-designed it. Everyone liked the idea and know exactly which problem we addressed.
