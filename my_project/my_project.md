@@ -1,5 +1,5 @@
 ---
-title: My Project
+title: DPP Documentation
 layout: home
 has_children: true
 ---
