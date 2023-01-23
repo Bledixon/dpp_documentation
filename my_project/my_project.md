@@ -104,7 +104,9 @@ Another problem was, that normally a gear is used to mount an object to the shaf
 
 #### Building the box
 
-- Box bauen      Kössi
+As with most things beginning turned out to be quite difficult. It was pretty clear from the get-go that we'd use wood as the main structural material, not only for it's durability, but also ease of access. We had to consider the g-forces that get applied to the material when the motor pulls the platform towards the ground and releases it. Similar stress is placed on the Solenoid, trying to hold the platform down. One concern we initially had was the weight, especially considering the quality of rope we'd use and how the motor truly is, which quickly became obsolete as mentioned in the other tests. Luckily we both had quite an array of broken wood furniture, old unused processed wood pieces and other wooden elements that could be used.
+
+#### Measuring & Praying
 
 
 #### The presentation
