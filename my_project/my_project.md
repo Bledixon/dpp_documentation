@@ -126,9 +126,9 @@ The first task we tackled was fixating the motor. We started by measuring the wo
 
 Switching from a box to a more open design allowed for a lot more flexibility in several aspects. After some trial and error trying to determine the needed minimum height for the middle platform we finally started building.. only to realize that we mounted the platform on the wrong socket of the drawer slide. The basic idea was to use six pieces of wood, four attached widthwise, two supporting and combining the opposite pillars on the top. This would also be the place we attached the springs to later on. After a good chunk of wood work and drilling in a rather unsafe manner we finally managed to complete the basic structure of the supporting/catapult element and attached it to the base, which marked the beginning of the testing and electronic phase. 
 
-![Supporting Pillar](supporting_pillar.jpg)
+![Supporting Pillar](assets/supporting_pillar.jpg)
 
-![Supporting Pillar](torque_test.mp4)
+![Supporting Pillar](assets/torque_test.mp4)
 
 #### The presentation
 While building the box of the prototype we found out that the wrinch is not that stable as it should be. The motor is able to rotate it without trying to pull down the plate, but with the plate the force of the springs was to much and the winch stayed on the same position. The other thing we noticed is that one solenoid is not enough to hold the plate. Therfore, we decided to go with a prototype which just shows how it should work. The solenoid and the motor never interact with the hanging plate and so no force is used to it. To show how the initial idea works the user has to pull down the plate and hold it until someone press the button.
